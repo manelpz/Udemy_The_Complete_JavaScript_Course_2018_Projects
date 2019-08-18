@@ -1,0 +1,10 @@
+
+
+var john = {
+    fullName:"john smith",
+    bills:[124, 48,268,42],
+    calcTips: function(){
+    
+    
+    }
+}
