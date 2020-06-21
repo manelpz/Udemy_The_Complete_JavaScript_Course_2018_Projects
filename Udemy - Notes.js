@@ -19,6 +19,6 @@ console.log(john);
 
 var john = ['john','smith', 1990];
 for (var i = 0; i < john.length; i++){
-    if(typeof john[i] == 'string') continue;
+    if(typeof john[i] == 'string') continue; //break;
     console.log(john[i]);
 }
