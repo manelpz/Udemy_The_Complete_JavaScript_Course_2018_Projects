@@ -29,6 +29,7 @@ for (var i = 0; i < john.length; i++){
 //call fistly a function is possible for hoisting
 calculateAge(1990);
 
+
 function calculateAge(year){
     console.log(2016 - year);
 }
@@ -45,7 +46,7 @@ function calculateAge(year){
 
 
 
-
+/*
  console.log(age);
  var age =30;
-
+*/
