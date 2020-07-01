@@ -77,10 +77,10 @@ john.average =calcAverage(john.tips);
 mark.average =calcAverage(mark.tips);
 
 console.log(john, mark);
-/*
+
 if (john.average > mark.average)
 {
     console.log(john.fullName * '\'s family pays higer tips, with an average of'+ john.average);
 }else{
     console.log(mark.fullName * '\'s family pays higer tips, with an average of'+ mark.average);    
-}*/
+}

@@ -44,9 +44,6 @@ function calculateAge(year){
  }
 
 
-
-
-/*
  console.log(age);
  var age =30;
-*/
+
