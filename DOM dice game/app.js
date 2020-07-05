@@ -19,4 +19,4 @@ dice = Math.floor(Math.random() * 6) + 1;
 console.log(dice);
 
 
-document.querySelector('#current-'+activiPlayer).textContent = dice;
+//document.querySelector('#current-'+activiPlayer).textContent = dice;
