@@ -11,13 +11,12 @@ GAME RULES:
 
 var scores, roundScore, activePlayer, dise;
 
-scores = [0,0];
-roundScore = 0;
-activiPlayer = 0;
+//scores = [0,0];
+//roundScore = 0;
+//activiPlayer = 0;
 
-dice = Math.floor(Math.random() * 6) + 1;
-console.log(dice);
+//dice = Math.floor(Math.random() * 6) + 1;console.log(dice);
 
-
-document.querySelector('#current-'+activiPlayer).textContent = dice;
+//document.querySelector('#current-'+activiPlayer).textContent = dice;
 document.querySelector('.dice').style.display = 'none';
+
