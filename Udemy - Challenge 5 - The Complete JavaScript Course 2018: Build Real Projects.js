@@ -92,3 +92,12 @@ var Person = function(name, yearOfBirth, job){
     this.yearOfBirth = yearOfBirth;
     this.job = job;
 }
+
+Person.prototype.caclculateAge = 
+function(){
+    console.log(2016-this.yearOfBirth);
+};
+
+var jane = new Person("jhon", 1999,"teacher");
+
+jane.calcAverage();
