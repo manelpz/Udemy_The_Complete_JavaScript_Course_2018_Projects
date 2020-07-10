@@ -84,3 +84,11 @@ if (john.average > mark.average)
 }else{
     console.log(mark.fullName * '\'s family pays higer tips, with an average of'+ mark.average);    
 }
+
+
+//function constructor
+var Person = function(name, yearOfBirth, job){
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+}
