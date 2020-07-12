@@ -146,3 +146,16 @@ if (job ==='designer'){
 
 var teacherQuestion = interviewQuestion('designer');
 teacherQuestion('john');
+
+
+//IIFE immediately invoked functions expression
+
+(function (){
+    var score = Math.random()* 10;
+    console.log(score >= 5);
+})();
+
+(function(goodluck){
+    var score = Math.random()*10;
+    console.log(score >= 5 - goodluck);
+})(5);
