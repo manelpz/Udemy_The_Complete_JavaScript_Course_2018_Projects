@@ -91,7 +91,7 @@ var Person = function(name, yearOfBirth, job){
     this.name = name;
     this.yearOfBirth = yearOfBirth;
     this.job = job;
-}
+};
 
 Person.prototype.calculateAge = 
 function(){
@@ -101,3 +101,30 @@ function(){
 var jane = new Person("jhon", 1999,"teacher");
 
 jane.calculateAge();
+
+
+//Object.create
+
+var personProto = {
+    calculateAge
+}
+
+
+//Passing functions as arguments
+
+var years = [1990,1995, 2000, 2005];
+
+function arraysCals(arr,fn){
+    var arrRes = [];
+    for(var i=0; i<arr.length;i++){
+        arrRes.push(fn(arr[i]));
+    }
+    return arrRes;
+}
+
+function calculateAge(el){
+    return 2020 - el;
+}
+
+var ages = arraysCals(years,calculateAge);
+console.log(ages);
