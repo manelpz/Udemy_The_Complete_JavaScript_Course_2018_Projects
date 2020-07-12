@@ -159,3 +159,35 @@ teacherQuestion('john');
     var score = Math.random()*10;
     console.log(score >= 5 - goodluck);
 })(5);
+
+
+//closure
+/*tiene acceso a A incluso despues de terminar ejecucion
+de la funcion retirement() */
+
+function retirement(retirementAge){
+    var a = ' years of retirement';
+    return function(yearOfBirth){
+        console.log((retirement-age)+a);
+    }
+}
+
+var retirementUS = retirement(66)
+retirementUS(1990);
+//=
+retirement(66)(1990);
+
+
+//fuction returning fuction with closures
+
+function interviewQuestion(job){
+    return function(name){
+            if (job ==='designer'){
+                console.log(name +" ux");
+            }else if(job === 'teacher')
+            {
+                console.log(name+ " school");
+            }
+        }
+    }
+interviewQuestion('designer')('john');
