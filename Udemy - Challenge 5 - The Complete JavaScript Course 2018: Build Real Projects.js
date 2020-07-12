@@ -128,3 +128,21 @@ function calculateAge(el){
 
 var ages = arraysCals(years,calculateAge);
 console.log(ages);
+
+
+//functions returning functions
+
+function interviewQuestion(job){
+if (job ==='designer'){
+    return function(name){
+        console.log(name +" ux");
+    }
+}else if(job === 'teacher'){
+    return function(name){
+        console.log(name+ " school");
+    }
+}
+}
+
+var teacherQuestion = interviewQuestion('designer');
+teacherQuestion('john');
