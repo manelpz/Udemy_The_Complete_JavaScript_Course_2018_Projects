@@ -191,3 +191,28 @@ function interviewQuestion(job){
         }
     }
 interviewQuestion('designer')('john');
+
+
+//Bind, call
+
+var john1 = {
+    name:'john',
+    age:26,
+    job:'teacher',
+    presentation: function(style, timeOfDay){
+        if(style === 'formal'){
+            console.log("good" + timeOfDay);
+        }else if(style === 'informal'){
+            console.log('hi');
+        }
+    }
+}
+
+john1.presentation('formal','morning');
+
+var emily = {
+    name:'emily',
+    age: 23,
+    job: 'designer'
+};
+john1.presentation.call(emily,'informal','night');
