@@ -216,3 +216,9 @@ var emily = {
     job: 'designer'
 };
 john1.presentation.call(emily,'informal','night');
+
+//otra forma es con apply, pero revise los valores en un array y no en variables
+
+john1.presentation.apply(emily,['informal','night']);
+
+john1.presentation.apply(emily,['informal','night']);
