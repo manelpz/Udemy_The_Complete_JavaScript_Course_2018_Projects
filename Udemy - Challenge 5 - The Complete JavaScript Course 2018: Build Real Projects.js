@@ -225,3 +225,47 @@ john1.presentation.apply(emily,['informal','night']);
 var johnFriendly = john1.presentation.bind(john,'frendly');
 
 johnFriendly('morning');
+
+
+//example of bind
+
+
+var years = [1990,1995, 2000, 2005];
+
+function arraysCals(arr,fn){
+    var arrRes = [];
+    for(var i=0; i<arr.length;i++){
+        arrRes.push(fn(arr[i]));
+    }
+    return arrRes;
+}
+
+function calculateAge(el){
+    return 2020 - el;
+}
+function isFullAge(limit,el){
+    return el >= limit 
+}
+
+var ages = arraysCals(years,calculateAge);
+console.log(ages);
+
+//bind 
+var ages2 = arraysCals(ages,isFullAge.bind(this,28));
+console.log(ages2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
