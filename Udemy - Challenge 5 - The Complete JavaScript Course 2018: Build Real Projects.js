@@ -133,15 +133,15 @@ console.log(ages);
 //functions returning functions
 
 function interviewQuestion(job){
-if (job ==='designer'){
-    return function(name){
-        console.log(name +" ux");
+    if (job ==='designer'){
+        return function(name){
+            console.log(name +" ux");
+        }
+    }else if(job === 'teacher'){
+        return function(name){
+            console.log(name+ " school");
+        }
     }
-}else if(job === 'teacher'){
-    return function(name){
-        console.log(name+ " school");
-    }
-}
 }
 
 var teacherQuestion = interviewQuestion('designer');
@@ -168,7 +168,7 @@ de la funcion retirement() */
 function retirement(retirementAge){
     var a = ' years of retirement';
     return function(yearOfBirth){
-        console.log((retirement-age)+a);
+        console.log((retirementAge-age)+a);
     }
 }
 
@@ -221,4 +221,7 @@ john1.presentation.call(emily,'informal','night');
 
 john1.presentation.apply(emily,['informal','night']);
 
-john1.presentation.apply(emily,['informal','night']);
+
+var johnFriendly = john1.presentation.bind(john,'frendly');
+
+johnFriendly('morning');
