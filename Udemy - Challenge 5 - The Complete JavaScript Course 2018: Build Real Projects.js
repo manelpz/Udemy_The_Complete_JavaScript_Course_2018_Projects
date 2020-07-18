@@ -283,6 +283,10 @@ var q1 = new Question('is javascript the coolest',
 var q2 =  new Question('is c· better that js',
 ['si', 'no']);
 
+var questions = [q1,q2];
+
+
+
 
 
 
