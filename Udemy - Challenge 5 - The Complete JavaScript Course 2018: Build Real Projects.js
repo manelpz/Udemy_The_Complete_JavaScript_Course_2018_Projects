@@ -168,6 +168,7 @@ de la funcion retirement() */
 function retirement(retirementAge){
     var a = ' years of retirement';
     return function(yearOfBirth){
+        var age = 2020 -yearOfBirth;
         console.log((retirementAge-age)+a);
     }
 }
@@ -254,6 +255,27 @@ console.log(ages);
 var ages2 = arraysCals(ages,isFullAge.bind(this,28));
 console.log(ages2);
 
+//bind 
+var ages2 = arraysCals(ages,isFullAge.bind(this,28));
+console.log(ages2);
+
+
+
+//example
+
+function Question(question,answers,correct){
+    this.question = question;
+    this.answers = answers;
+    this.correct = correct;
+}
+
+Question.prototype.displayQuestion(){
+    console.log(this.question);
+
+    for(var i=0;i<this.answers.length; i++;){
+        console.log(this.answers[i]);
+    }
+}
 
 
 
