@@ -277,6 +277,11 @@ Question.prototype.displayQuestion(){
     }
 }
 
+var q1 = new Question('is javascript the coolest',
+['yes','no'],0);
+
+var q2 =  new Question('is c· better that js',
+['si', 'no']);
 
 
 
