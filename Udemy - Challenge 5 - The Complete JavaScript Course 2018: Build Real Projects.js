@@ -285,7 +285,8 @@ var q2 =  new Question('is c· better that js',
 
 var questions = [q1,q2];
 
-
+var n = Math.floor(Math.random() * questions.length);
+questions[n].displayQuestion();
 
 
 
