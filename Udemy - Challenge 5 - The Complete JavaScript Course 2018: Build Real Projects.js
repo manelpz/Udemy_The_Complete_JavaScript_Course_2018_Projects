@@ -231,33 +231,44 @@ johnFriendly('morning');
 //example of bind
 
 
-var years = [1990,1995, 2000, 2005];
-
-function arraysCals(arr,fn){
-    var arrRes = [];
-    for(var i=0; i<arr.length;i++){
-        arrRes.push(fn(arr[i]));
+var john = {
+    name: 'John',
+    age: 26,
+    job: 'teacher',
+    presentation: function(style, timeOfDay) {
+        if (style === 'formal') {
+            console.log('Good ' + timeOfDay + ', Ladies and gentlemen! I\'m ' +  this.name + ', I\'m a ' + this.job + ' and I\'m ' + this.age + ' years old.');
+        } else if (style === 'friendly') {
+            console.log('Hey! What\'s up? I\'m ' +  this.name + ', I\'m a ' + this.job + ' and I\'m ' + this.age + ' years old. Have a nice ' + timeOfDay + '.');
+        }
     }
-    return arrRes;
-}
+};
 
-function calculateAge(el){
-    return 2020 - el;
-}
-function isFullAge(limit,el){
-    return el >= limit 
-}
+var emily = {
+    name: 'Emily',
+    age: 35,
+    job: 'designer'
+};
 
-var ages = arraysCals(years,calculateAge);
-console.log(ages);
+john.presentation('formal', 'morning');
 
-//bind 
-var ages2 = arraysCals(ages,isFullAge.bind(this,28));
-console.log(ages2);
+john.presentation.call(emily, 'friendly', 'afternoon');
 
-//bind 
-var ages2 = arraysCals(ages,isFullAge.bind(this,28));
-console.log(ages2);
+john.presentation.apply(emily, ['friendly', 'afternoon']);
+
+
+//var johnFriendly = john.presentation.bind(john, 'friendly');
+
+//johnFriendly('morning');
+
+var johnFriendly = john.presentation.bind(john, 'friendly')('morning');
+//,'afternoon');
+//johnFriendly('night');
+/*
+var emilyFormal = john.presentation.bind(emily, 'formal');
+emilyFormal('afternoon');*/
+
+
 
 
 
@@ -272,7 +283,7 @@ function Question(question,answers,correct){
 Question.prototype.displayQuestion(){
     console.log(this.question);
 
-    for(var i=0;i<this.answers.length; i++;){
+    for(var i=0;i<this.answers.length; i++){
         console.log(this.answers[i]);
     }
 }
@@ -281,7 +292,7 @@ var q1 = new Question('is javascript the coolest',
 ['yes','no'],0);
 
 var q2 =  new Question('is c· better that js',
-['si', 'no']);
+['si', 'no'], 1);
 
 var questions = [q1,q2];
 
