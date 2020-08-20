@@ -147,6 +147,9 @@ function interviewQuestion(job){
 var teacherQuestion = interviewQuestion('designer');
 teacherQuestion('john');
 
+var teacherQuestion = interviewQuestion('designer');
+teacherQuestion('john');
+
 
 //IIFE immediately invoked functions expression
 

@@ -41,3 +41,13 @@ VNQ*
 
 
 1:44
+
+
+
+51
+17
+68
+
+
+
+The dumb things that smart people do with their money
