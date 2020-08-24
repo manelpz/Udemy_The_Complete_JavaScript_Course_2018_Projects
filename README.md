@@ -11,43 +11,5 @@
 
 
 
-💎 Udemy exercises 
 
 
-
-VOO*
-VDEV
-VDEM
-VNQ*
-
-
-18432
- 7574
-
-26006
-4
-
-
-
-
-
-13000
- 5000
-
-
-
-203 pincel
-770 color
-
-
-1:44
-
-
-
-51
-17
-68
-
-
-
-The dumb things that smart people do with their money
